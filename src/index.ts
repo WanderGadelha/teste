@@ -1,3 +1,7 @@
 import { server } from './server/Server'
+import 'dotenv/config'
 
-server.listen(3000, () => console.log('Servidor Rodando na porta 3000'))
+server.listen(process.env.PORT, () => {
+  console.log(`Servidor Rodand na porta ${process.env.PORT|| 3000}`)
+  
+})
